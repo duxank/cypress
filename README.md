@@ -59,3 +59,13 @@ In the test file, you can loop through all entries in the fixture and use the Fe
 - The Page Object is a plain object, no classes or `new` needed.
 - Each test iteration starts on a fresh page to avoid state issues.
 - CAPTCHA is automatically read and solved for convenience.
+
+## Mochawesome Reporting in This Framework
+
+This Cypress framework uses **Mochawesome** to generate detailed HTML reports for every test run. It is integrated so that all your **data-driven tests and Page Object actions** automatically log results.
+
+### How It Works
+
+1. **Reporter Integration**
+   - Added in `cypress.config.js` under `reporter` and `reporterOptions`.
+   - Every test run generates a report in `cypress/reports/`.

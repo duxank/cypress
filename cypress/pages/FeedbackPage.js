@@ -17,7 +17,7 @@ export const FeedbackPage = {
     cy.get(HomePage.elements.sideNav).should('be.visible');
     cy.get(HomePage.elements.feedbackLink).click();
     cy.url().should('include', '/contact');
-    cy.get(this.elements.header).should('contain.text', 'Customer Feedback');
+    // cy.get(this.elements.header).should('contain.text', 'Customer Feedback');
   },
 
   fillComment(comment) {

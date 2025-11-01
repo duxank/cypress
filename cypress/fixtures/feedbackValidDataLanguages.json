@@ -1,0 +1,72 @@
+[
+  {
+    "language": "English",
+    "comment": "Everything works great!",
+    "rating": 5,
+    "captcha": "correct",
+    "expectedMessage": "Thank you so much for your amazing 5-star feedback!"
+  },
+  {
+    "language": "English",
+    "comment": "Works fine but could be improved.",
+    "rating": 4,
+    "captcha": "correct",
+    "expectedMessage": "Thank you for your feedback."
+  },
+  {
+    "language": "Dansk",
+    "comment": "Alt fungerer perfekt!",
+    "rating": 5,
+    "captcha": "correct",
+    "expectedMessage": "Mange tak for din fantastiske 5-stjernede feedback!"
+  },
+  {
+    "language": "Dansk",
+    "comment": "Alt fungerer!",
+    "rating": 4,
+    "captcha": "correct",
+    "expectedMessage": "Tak for din feedback."
+  },
+  {
+    "language": "Deutsch",
+    "comment": "Alles funktioniert einwandfrei!",
+    "rating": 5,
+    "captcha": "correct",
+    "expectedMessage": "Herzlichen Dank für dein tolles 5-Sterne-Feedback!"
+  },
+  {
+    "language": "Deutsch",
+    "comment": "Alles funktioniert einwandfrei!",
+    "rating": 4,
+    "captcha": "correct",
+    "expectedMessage": "Danke für dein Feedback."
+  },
+  {
+    "language": "Français",
+    "comment": "Tout fonctionne parfaitement!",
+    "rating": 5,
+    "captcha": "correct",
+    "expectedMessage": "Merci beaucoup pour votre incroyable avis à 5 étoiles !"
+  },
+  {
+    "language": "Français",
+    "comment": "Tout fonctionne!",
+    "rating": 4,
+    "captcha": "correct",
+    "expectedMessage": "Merci pour votre évaluation."
+  },
+  {
+    "language": "Español",
+    "comment": "Todo funciona perfectamente!",
+    "rating": 5,
+    "captcha": "correct",
+    "expectedMessage": "¡Muchas gracias por tus increíbles comentarios 5 estrellas!"
+  },
+  {
+    "language": "Español",
+    "comment": "Todo funciona!",
+    "rating": 3,
+    "captcha": "correct",
+    "expectedMessage": "Gracias por los comentarios."
+  }
+]
