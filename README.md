@@ -1,36 +1,40 @@
-# cypress
-
-Cypress POC project
-
 # Juice Shop Feedback Form Automation
 
 This repository contains Cypress automation for the Juice Shop Feedback form using a Page Object pattern and data-driven tests.
 
 ## Overview
 
-- Page Objects: Encapsulate actions for HomePage and FeedbackPage.
-- Data-driven tests: Separate JSON files for valid and invalid feedback data.
-- Automatic CAPTCHA handling: Solves numeric CAPTCHA automatically unless a custom value is provided.
+- Page Objects encapsulate actions for HomePage and FeedbackPage.
+- Data-driven tests use separate JSON files for valid and invalid feedback.
+- CAPTCHA is automatically solved unless a custom value is provided.
 - Easy navigation: FeedbackPage includes a single method to navigate from the home page.
 
 ## Folder Structure
 
+```
 cypress/
 ├── e2e/
-│ └── feedback.cy.js # Cypress test file
+│   └── feedback.cy.js          # Cypress test file
 ├── pages/
-│ ├── HomePage.js # Home page object
-│ └── FeedbackPage.js # Feedback page object
+│   ├── HomePage.js             # Home page object
+│   └── FeedbackPage.js         # Feedback page object
 ├── fixtures/
-│ ├── feedbackValid.json # Valid test data
-│ └── feedbackInvalid.json # Invalid test data
+│   ├── feedbackValid.json      # Valid test data
+│   └── feedbackInvalid.json    # Invalid test data
 └── support/
-└── commands.js # Custom Cypress commands
+    └── commands.js             # Custom Cypress commands
+```
 
 ## How to Run Tests
 
-1. Install dependencies: npm install
-2. Open Cypress test runner: npx cypress open
+1. Install dependencies:
+   ```
+   npm install
+   ```
+2. Open Cypress test runner:
+   ```
+   npx cypress open
+   ```
 3. Select `feedback.cy.js` to run the tests.
 4. Tests will automatically navigate to the Feedback page and execute using the data in the fixture files.
 
