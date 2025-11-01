@@ -70,3 +70,7 @@ This Cypress framework uses **Mochawesome** to generate detailed HTML reports fo
    - Added in `cypress.config.js` under `reporter` and `reporterOptions`.
    - Every test run generates a report in `cypress/reports/`.
    - To see results, run cypress: npx cypress run
+
+  
+<img width="1898" height="824" alt="test execution" src="https://github.com/user-attachments/assets/4e101859-f73a-49d4-8247-4aba7ef49580" />
+<img width="1887" height="864" alt="test report" src="https://github.com/user-attachments/assets/9b2c418a-37b5-413e-bb4c-367fb65afaad" />
