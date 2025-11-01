@@ -1,5 +1,13 @@
 [
-  { "comment": "Great product!", "rating": 5, "captcha": "correct" },
-  { "comment": "Needs improvement", "rating": 3, "captcha": "correct" },
-  { "comment": "Testing wrong CAPTCHA", "rating": 4, "captcha": "9999" }
+  { "comment": "L", "rating": 2, "captcha": "123456789" },
+  {
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do",
+    "rating": 2,
+    "captcha": "123456789"
+  },
+  {
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "rating": 2,
+    "captcha": "123456789"
+  }
 ]

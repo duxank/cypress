@@ -22,3 +22,13 @@ Cypress.Commands.add('dismissCookiesIfPresent', () => {
     }
   });
 });
+Cypress.Commands.add('selectLanguage', (language) => {
+  // Open the language dropdown or button
+  cy.get('#navbarLanguageButton').click({ force: true });
+
+  // Find the desired language radio button and click
+  cy.get('body')
+    .find('mat-radio-button')
+    .contains(language)
+    .click({ force: true });
+});

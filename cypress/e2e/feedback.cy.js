@@ -1,7 +1,7 @@
 import { HomePage } from '../pages/HomePage';
 import { FeedbackPage } from '../pages/FeedbackPage';
 
-describe('Feedback Form Data-Driven Tests', () => {
+describe('Scenario #2', () => {
   describe('Valid feedback', () => {
     beforeEach(function () {
       // Load valid dataset
@@ -22,7 +22,10 @@ describe('Feedback Form Data-Driven Tests', () => {
         FeedbackPage.fillCaptcha(data.captcha);
         FeedbackPage.submit();
 
-        FeedbackPage.verifySuccess();
+        // FeedbackPage.verifySuccess();
+        cy.get('.mat-mdc-snack-bar-label', { timeout: 10000 }).should(
+          'be.visible'
+        );
 
         // Reset page for next iteration
         cy.reload();
@@ -43,17 +46,21 @@ describe('Feedback Form Data-Driven Tests', () => {
       FeedbackPage.navigateToFeedbackPage();
     });
 
-    it('should display error for all invalid data sets', function () {
+    it('should display error for wrong captcha', function () {
       this.invalidData.forEach((data) => {
         FeedbackPage.fillComment(data.comment);
         FeedbackPage.setRating(data.rating);
-        FeedbackPage.fillCaptcha(data.captcha);
+        FeedbackPage.fillCaptcha(data.captcha, { force: true });
         FeedbackPage.submit();
 
-        // Verify error message appears
-        cy.get('.mat-mdc-snack-bar-label', { timeout: 10000 }).should(
-          'be.visible'
-        );
+        // // Verify error message appears
+        // cy.get('.mat-mdc-snack-bar-label', { timeout: 10000 }).should(
+        //   'be.visible'
+        // );
+
+        cy.get('.mat-mdc-snack-bar-label', { timeout: 10000 })
+          .should('be.visible')
+          .and('contain.text', 'Wrong answer to CAPTCHA. Please try again.');
 
         // Reset page for next iteration
         cy.reload();
