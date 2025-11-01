@@ -1,3 +1,5 @@
+import { HomePage } from './HomePage';
+
 export const FeedbackPage = {
   elements: {
     header: 'h1',
@@ -7,6 +9,15 @@ export const FeedbackPage = {
     captchaLabel: '#captcha',
     captchaInput: '#captchaControl',
     submitButton: '#submitButton',
+  },
+
+  navigateToFeedbackPage() {
+    cy.get(HomePage.elements.logo, { timeout: 10000 }).should('be.visible');
+    cy.get(HomePage.elements.menuButton).click();
+    cy.get(HomePage.elements.sideNav).should('be.visible');
+    cy.get(HomePage.elements.feedbackLink).click();
+    cy.url().should('include', '/contact');
+    cy.get(this.elements.header).should('contain.text', 'Customer Feedback');
   },
 
   fillComment(comment) {
