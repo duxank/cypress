@@ -5,8 +5,8 @@ export const HomePage = {
     menuButton: 'button[aria-label="Open Sidenav"]',
     sideNav: 'mat-sidenav',
     feedbackLink: 'a[routerlink="/contact"]',
-    welcomeHeader: 'h1:contains("Welcome to OWASP Juice Shop!")',
+    welcomeHeader: 'h1:contains("Welcome to OWASP Juice Shop!")', //text is always in English
     cookieDismissButton: 'a[aria-label="dismiss cookie message"]',
-    welcomeDialogCloseButton: "button[aria-label='Close Welcome Banner']",
+    welcomeDialogCloseButton: "button[aria-label='Close Welcome Banner']", //stable
   },
 };
