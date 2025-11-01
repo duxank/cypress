@@ -8,6 +8,9 @@ Cypress.Commands.add('closeWelcomeBannerIfPresent', () => {
       cy.wrap(bannerButton).click({ force: true });
 
       cy.get(HomePage.elements.welcomeDialogCloseButton).should('not.exist'); //Re-query the DOM
+      cy.get('div.mat-mdc-dialog-surface.mdc-dialog__surface').should(
+        'not.exist'
+      );
     }
   });
 });
