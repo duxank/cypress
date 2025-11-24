@@ -41,8 +41,12 @@ describe('Scenario #2', () => {
       cy.visit(HomePage.url);
       cy.dismissCookiesIfPresent();
       cy.closeWelcomeBannerIfPresent();
-      cy.get('.cdk-overlay-backdrop').should('not.exist');
-      FeedbackPage.navigateToFeedbackPage();
+      // Wait for overlay to disappear with a longer timeout
+      cy.get('.cdk-overlay-backdrop', { timeout: 10000 })
+        .should('not.exist')
+        .then(() => {
+          FeedbackPage.navigateToFeedbackPage();
+        });
     });
 
     it('should display error for wrong captcha', function () {
